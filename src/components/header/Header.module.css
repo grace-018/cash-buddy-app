@@ -1,0 +1,64 @@
+.container {
+  width: 100%;
+  background-color: #1b7895;
+  color: whitesmoke;
+}
+
+.header {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 1.5fr;
+}
+
+.logo {
+  width: 25vw;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  align-self: center;
+}
+
+.infoContainer {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: flex-start;
+}
+
+.name {
+  align-self: baseline;
+  margin: 5px 0 0;
+}
+
+.balance {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  margin: 0;
+}
+
+.report {
+  align-self: flex-end;
+  place-self: center;
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    width: 20vw;
+  }
+  .name {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .logo {
+    width: 9vw;
+  }
+  .name {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+  }
+}
